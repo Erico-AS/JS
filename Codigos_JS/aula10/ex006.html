@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       div#dv {
+            background: green;
+            color: blue;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: xx-large;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id = "dv" >
+        Interaja....
+    </div>
+
+    <script>
+        var d = window.document.getElementById ('dv')
+
+        d.addEventListener('click', clique)
+        d.addEventListener('mouseenter', entre)
+        d.addEventListener('mouseout', sai)
+
+        function clique() {
+            d.innerText = "Clicou"
+            d.style.background = 'red'
+            d.style.color = 'yellow'
+            d.style.fontSize = 'xxx-large'
+        }
+
+        function entre(){
+            d.innerText = "Entrou!"
+            d.style.background = 'green'
+            d.style.color = 'blue'
+            d.style.fontSize = 'medium'
+        }
+
+        function sai(){
+            d.innerText = "Saiu!"
+            d.style.background = 'blue'
+            d.style.color = 'red'
+            d.style.fontSize = 'xx-small'
+        }
+    </script>
+</body>
+</html>

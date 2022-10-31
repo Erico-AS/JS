@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" href="ex009_1.html" href="ex009_2.html" href="ex009_3.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu Messi</title>
+</head>
+<body>
+    <h1>Quantos gols o Messi marcou em 2012?</h1>
+   <input type="number" value="0" id="gols">
+   <input type="button" id="bot" value="Confirmar" onclick="verificar()">
+   <div id="res"></div>
+  
+
+    <script>
+     
+     function verificar() {
+      
+      var g = document.getElementById('gols')
+      var r = document.querySelector('div#res')
+      var gol = Number(g.value)
+      r.innerHTML = `<p>Sua resposta foi ${gol} gol(s)</p>`
+
+       if (gol == 91) {
+         r.innerHTML += `<p>Você acertou! Parabéns!</p>`
+       }
+       else {
+          r.innerHTML += `<p>Você errou, tente novamente</p>`
+       }
+     }
+    </script>
+</body>
+</html>

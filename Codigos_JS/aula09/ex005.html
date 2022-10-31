@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+
+    <style>
+        body {
+            background: rgb(116, 163, 224);
+            color: cornsilk;
+            font: status-bar 18pt;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="primeira">Introdução ao DOM </h1>
+    <p id="msg">Aq vai o resultado</p>
+    <p>Aprenda a usar o <strong>DOM</strong> em JS</p>
+    <div>Clique em mim</div>
+
+    <script>
+      
+      var div1 = window.document.getElementsByTagName('div')[0]
+       window.document.write('Repetindo a div: ' + div1.innerText)
+        div1.style.color = 'blue'
+        
+        /*para puxar formatações, use o innerHTML*/
+        var p2 = window.document.getElementsByTagName('p')[1]
+        window.document.write(p2.innerHTML)
+        /*Não use o innerHTML para alert.
+        innerHTML puxa as tags
+        innerText puxa o texto apenas
+        */
+
+        var i = window.document.getElementById('msg')
+        i.style.background = 'green'
+        i.innerText = 'Mudei por JS'
+        /*Pegar por ID*/
+
+        var h = document.getElementsByClassName('h1')[0]
+        h.write('Trocado por JS usando a classe')
+        /*Não prescisa usar window sempre*/
+    </script>
+</body>
+</html>
